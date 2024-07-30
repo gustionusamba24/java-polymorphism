@@ -15,5 +15,15 @@ public class NextMain {
 
         var mrbean = Movie.getMovie("C", "Mr. Bean");
         mrbean.watchMovie();
+
+        Object unknownObject = Movie.getMovie("A", "Dune");
+        if (unknownObject.getClass().getSimpleName().equals("Comedy")) {
+            Movie.Comedy c = (Movie.Comedy) unknownObject;
+            c.watchComedy();
+        } else if (unknownObject instanceof Movie.Adventure) {
+            ((Movie.Adventure) unknownObject).watchAdventure();
+        } else if (unknownObject instanceof Movie.ScienceFiction scifi) {
+            scifi.watchScienceFiction();
+        }
     }
 }
