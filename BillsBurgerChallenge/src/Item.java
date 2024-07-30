@@ -22,7 +22,7 @@ public class Item {
         return price;
     }
 
-    public double getAdjustedSize() {
+    public double getAdjustedPrice() {
         return switch (size) {
             case "SMALL" -> getBasePrice() - 0.5;
             case "LARGE" -> getBasePrice() + 1;
@@ -39,6 +39,6 @@ public class Item {
     }
 
     public void printItem() {
-        printItem(getName(), getAdjustedSize());
+        printItem(getName(), getAdjustedPrice());
     }
 }
