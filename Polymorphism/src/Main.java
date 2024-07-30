@@ -14,8 +14,6 @@ public class Main {
             }
             System.out.println("Enter the title: ");
             String title = scanner.nextLine();
-            Movie movie = Movie.getMovie(type, title);
-            movie.watchMovie();
         }
     }
 }
